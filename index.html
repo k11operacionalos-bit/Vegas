@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no, maximum-scale=1.0"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="TITAN v5"/>
+  <meta name="theme-color" content="#080c12"/>
+  <meta name="color-scheme" content="dark"/>
+  <meta name="description" content="TITAN ECOSYSTEM v6 — The Largest Development Ecosystem Ever Created - AI-Powered DevOps Platform with Global Integrations, Real-time Collaboration, and Infinite Scalability"/>
+  <meta name="keywords" content="TITAN, Ecosystem, AI, DevOps, GitHub, Claude, Render, Supabase, AWS, Azure, GCP, Blockchain, VR, AR, Real-time, Collaboration, Marketplace, Extensions"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="x-ua-compatible" content="ie=edge"/>
+  <meta name="msapplication-TileColor" content="#080c12"/>
+  <title>🌌 TITAN ECOSYSTEM v6 — The Ultimate Development Universe</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            titan: {
+              bg:"#080c12",bg2:"#0d1420",bg3:"#111c2e",bg4:"#172336",
+              border:"#192840",border2:"#1f3352",
+              copper:"#d97757",green:"#0fd98a",red:"#f43060",
+              yellow:"#f5a623",cyan:"#18d4f0",purple:"#9c7df5",
+              accent:"#2f78f0",text:"#c4d4e8",mid:"#6888aa",dim:"#2e4560",
+            }
+          },
+          fontFamily: {
+            mono:["JetBrains Mono","IBM Plex Mono","Fira Code","monospace"],
+            display:["Syne","Outfit","Montserrat","serif"],
+            ui:["Inter","Roboto","Poppins","Space Grotesk","system-ui","sans-serif"],
+            sans:["Inter","Roboto","Open Sans","Lato","Raleway","Poppins","system-ui","sans-serif"],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts Modernas e Profissionais -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Syne:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@100;300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700;900&family=Raleway:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
+  <!-- FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+
+  <!-- WebRTC for Real-time Collaboration -->
+  <script src="https://cdn.jsdelivr.net/npm/simple-peer@9.11.1/simplepeer.min.js"></script>
+
+  <!-- Socket.io for Real-time Communication -->
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+
+  <!-- Monaco Editor for Advanced Code Editing -->
+  <script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.min.js"></script>
+
+  <!-- Chart.js for Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Blockchain Integration (Web3.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+
+  <!-- VR/AR Support (A-Frame) -->
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+  <!-- Advanced Libraries for Ultimate Ecosystem -->
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/lib/codemirror.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/javascript/javascript.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/python/python.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/rust/rust.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/go/go.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/php/php.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/ruby/ruby.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/swift/swift.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/kotlin/kotlin.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/dart/dart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/clojure/clojure.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/haskell/haskell.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/lua/lua.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/perl/perl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/r/r.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/mathematica/mathematica.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/julia/julia.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/erlang/erlang.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/elixir/elixir.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/crystal/crystal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/nim/nim.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/zig/zig.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/v/v.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/fortran/fortran.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/pascal/pascal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/ada/ada.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/cobol/cobol.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/smalltalk/smalltalk.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/prolog/prolog.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/scheme/scheme.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/tcl/tcl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/verilog/verilog.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/vhdl/vhdl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/systemverilog/systemverilog.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/turtle/turtle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/sparql/sparql.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/stex/stex.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/asciiarmor/asciiarmor.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/asn.1/asn.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/asterisk/asterisk.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/brainfuck/brainfuck.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/clike/clike.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/cmake/cmake.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/coffeescript/coffeescript.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/commonlisp/commonlisp.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/crystal/crystal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/css/css.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/cypher/cypher.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/d/d.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/dockerfile/dockerfile.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/elm/elm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/factor/factor.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/fcl/fcl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/forth/forth.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/gherkin/gherkin.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/haml/haml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/handlebars/handlebars.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/haxe/haxe.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/htmlmixed/htmlmixed.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/http/http.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/idl/idl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/jinja2/jinja2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/jsx/jsx.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/livescript/livescript.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/mathematica/mathematica.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/mbox/mbox.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/mirc/mirc.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/modelica/modelica.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/mscgen/mscgen.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/mumps/mumps.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/nginx/nginx.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/nsis/nsis.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/ntriples/ntriples.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/octave/octave.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/oz/oz.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/pascal/pascal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/pegjs/pegjs.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/pug/pug.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/puppet/puppet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/q/q.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/r/r.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/rpm/rpm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/rst/rst.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/ruby/ruby.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/rust/rust.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/sas/sas.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/sass/sass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/scheme/scheme.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/shell/shell.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/sieve/sieve.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/slim/slim.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/smalltalk/smalltalk.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/smarty/smarty.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/solr/solr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/soy/soy.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/sparql/sparql.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/spreadsheet/spreadsheet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/sql/sql.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/stex/stex.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/stylus/stylus.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/swift/swift.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/tcl/tcl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/textile/textile.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/tiddlywiki/tiddlywiki.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/tiki/tiki.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/toml/toml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/tornado/tornado.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/troff/troff.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/ttcn/ttcn.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/ttcn-cfg/ttcn-cfg.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/turtle/turtle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/twig/twig.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/vb/vb.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/vbscript/vbscript.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/velocity/velocity.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/verilog/verilog.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/vhdl/vhdl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/vue/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/wast/wast.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/webidl/webidl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/xml/xml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/xquery/xquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/yacas/yacas.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/yaml/yaml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/mode/z80/z80.js"></script>
+
+  <!-- Quantum Computing Simulation -->
+  <script src="https://cdn.jsdelivr.net/npm/qiskit@0.46.0/dist/qiskit.js"></script>
+
+  <!-- Neural Networks -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder@1.3.3"></script>
+
+  <!-- Advanced 3D Graphics -->
+  <script src="https://cdn.jsdelivr.net/npm/babylonjs@6.29.0/babylon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/playcanvas@1.67.0/build/playcanvas.min.js"></script>
+
+  <!-- Real-time Communication -->
+  <script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.2/dist/peerjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/twilio-video@2.28.1/dist/twilio-video.min.js"></script>
+
+  <!-- Advanced Data Visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vis@4.21.0/dist/vis.min.js"></script>
+
+  <!-- IoT & Hardware Integration -->
+  <script src="https://cdn.jsdelivr.net/npm/johnny-five@2.1.0/lib/johnny-five.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cylon@2.0.0/lib/cylon.js"></script>
+
+  <!-- Advanced Audio Processing -->
+  <script src="https://cdn.jsdelivr.net/npm/tone@14.7.77/build/Tone.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js"></script>
+
+  <!-- Advanced Video Processing -->
+  <script src="https://cdn.jsdelivr.net/npm/opencv@4.8.0/build/opencv.js"></script>
+
+  <!-- Natural Language Processing -->
+  <script src="https://cdn.jsdelivr.net/npm/compromise@14.10.0/builds/compromise.min.js"></script>
+
+  <!-- Advanced Math & Scientific Computing -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjs@12.2.1/lib/browser/math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/numeric@1.2.6/numeric-1.2.6.min.js"></script>
+
+  <!-- Game Development -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.7/dist/phaser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.3.2/dist/pixi.min.js"></script>
+
+  <!-- Robotics & Automation -->
+  <script src="https://cdn.jsdelivr.net/npm/roslib@1.3.0/build/roslib.min.js"></script>
+
+  <!-- Satellite & Space Tech -->
+  <script src="https://cdn.jsdelivr.net/npm/satellite@4.1.3/dist/satellite.min.js"></script>
+
+  <!-- Advanced Security -->
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.2.0/crypto-js.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jose@4.14.4/dist/browser/jwe.min.js"></script>
+
+  <!-- Advanced Compression -->
+  <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
+
+  <!-- TITAN v6 CSS -->
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/agent.css"/>
+  <link rel="stylesheet" href="css/editor.css"/>
+  <link rel="stylesheet" href="css/skills.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+  <link rel="stylesheet" href="css/utilities-responsive.css"/>
+  <link rel="stylesheet" href="css/typography-modern.css"/>
+  <link rel="stylesheet" href="css/animations-3d.css"/>
+  <!-- TITAN v6 FUSION CSS — Claw Code + Nga -->
+  <link rel="stylesheet" href="css/claw-fusion.css"/>
+
+  <!-- TITAN AGENT ICON ANIMATIONS -->
+  <style>
+    @keyframes titanFloat {
+      0%,100%{transform:translateY(0) rotateY(-8deg)}
+      25%{transform:translateY(-6px) rotateY(5deg)}
+      50%{transform:translateY(-10px) rotateY(10deg)}
+      75%{transform:translateY(-4px) rotateY(-2deg)}
+    }
+    @keyframes titanFloatSm {
+      0%,100%{transform:translateY(0) rotateY(-6deg)}
+      50%{transform:translateY(-3px) rotateY(6deg)}
+    }
+    @keyframes visorPulse {
+      0%,100%{opacity:.85} 50%{opacity:1}
+    }
+    @keyframes crestSway {
+      0%,100%{transform-origin:bottom center;transform:rotate(-2deg)}
+      50%{transform:rotate(2deg)}
+    }
+    .titan-icon-wrap { perspective:600px; display:inline-flex; }
+    .titan-icon-3d   { animation:titanFloat 5s ease-in-out infinite; transform-style:preserve-3d; }
+    .titan-icon-3d-sm{ animation:titanFloatSm 4s ease-in-out infinite; transform-style:preserve-3d; }
+    .titan-visor     { animation:visorPulse 2.5s ease-in-out infinite; }
+    .titan-crest     { animation:crestSway 3s ease-in-out infinite; }
+  </style>
+</head>
+<body>
+
+<!-- ══ THREE.JS CANVAS BG ════════════════════════════════════════ -->
+<canvas id="three-canvas"></canvas>
+
+<!-- ══ TOAST CONTAINER ═══════════════════════════════════════════ -->
+<div id="toast-container"></div>
+
+<div id="app">
+
+  <!-- ══ SETUP SCREEN ════════════════════════════════════════════ -->
+  <div id="setup-screen" class="show">
+    <div class="setup-card">
+      <div class="setup-logo">
+        <div class="titan-icon-wrap">
+        <div class="titan-icon-3d">
+        <svg viewBox="0 0 80 100" width="72" height="90" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 3px 12px rgba(217,119,87,0.5)) drop-shadow(0 1px 4px rgba(0,0,0,0.5))">
+          <defs>
+            <linearGradient id="sl-rim" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F5D060"/><stop offset="40%" stop-color="#d97757"/><stop offset="80%" stop-color="#8B5010"/><stop offset="100%" stop-color="#F0C040"/></linearGradient>
+            <linearGradient id="sl-body" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a2e58"/><stop offset="55%" stop-color="#0c1830"/><stop offset="100%" stop-color="#060c18"/></linearGradient>
+            <linearGradient id="sl-helm" x1="0%" y1="0%" x2="70%" y2="100%"><stop offset="0%" stop-color="#C8DCF0"/><stop offset="55%" stop-color="#7A94AA"/><stop offset="100%" stop-color="#3A5060"/></linearGradient>
+            <linearGradient id="sl-crest" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#E74C3C"/><stop offset="100%" stop-color="#7B241C"/></linearGradient>
+            <linearGradient id="sl-visor" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="rgba(0,200,255,0.9)"/><stop offset="100%" stop-color="rgba(0,90,190,0.5)"/></linearGradient>
+            <filter id="sl-glow-g"><feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="b"/><feFlood flood-color="#d97757" flood-opacity="0.6" result="c"/><feComposite in="c" in2="b" operator="in" result="s"/><feComposite in="SourceGraphic" in2="s" operator="over"/></filter>
+            <filter id="sl-glow-c"><feGaussianBlur in="SourceAlpha" stdDeviation="2" result="b"/><feFlood flood-color="#00D4FF" flood-opacity="0.7" result="c"/><feComposite in="c" in2="b" operator="in" result="s"/><feComposite in="SourceGraphic" in2="s" operator="over"/></filter>
+          </defs>
+          <!-- Shield rim -->
+          <path d="M40 3 L74 16 L74 52 Q74 82 40 97 Q6 82 6 52 L6 16 Z" fill="url(#sl-rim)"/>
+          <!-- Shield body -->
+          <path d="M40 7 L70 19 L70 52 Q70 78 40 92 Q10 78 10 52 L10 19 Z" fill="url(#sl-body)"/>
+          <!-- Inner gold border -->
+          <path d="M40 11 L66 22 L66 52 Q66 74 40 87 Q14 74 14 52 L14 22 Z" fill="none" stroke="rgba(217,119,87,0.4)" stroke-width="0.8"/>
+          <!-- Shine -->
+          <path d="M40 7 L70 19 L70 52 Q70 78 40 92 Q10 78 10 52 L10 19 Z" fill="rgba(255,255,255,0.07)"/>
+          <!-- Corner dots -->
+          <circle cx="40" cy="14" r="1.8" fill="#d97757" filter="url(#sl-glow-g)"/>
+          <!-- Body armor -->
+          <rect x="30" y="63" width="20" height="18" rx="2.5" fill="url(#sl-helm)" opacity="0.9"/>
+          <line x1="40" y1="63" x2="40" y2="73" stroke="#3A5060" stroke-width="0.6"/>
+          <!-- Neck -->
+          <rect x="37" y="58" width="6" height="7" rx="2" fill="#AABCCC"/>
+          <!-- Shoulders -->
+          <ellipse cx="27" cy="66" rx="5" ry="3.5" fill="#AABCCC" stroke="#7A94AA" stroke-width="0.5"/>
+          <ellipse cx="53" cy="66" rx="5" ry="3.5" fill="#9AAABB" stroke="#7A94AA" stroke-width="0.5"/>
+          <!-- Helmet dome -->
+          <path d="M24 55 Q24 38 40 36 Q56 38 56 55 L54 60 Q46 63 40 64 Q34 63 26 60 Z" fill="url(#sl-helm)" stroke="#5A7080" stroke-width="0.6"/>
+          <!-- Cheeks -->
+          <path d="M26 51 Q22 53 23 59 Q26 62 29 61 L29 53 Z" fill="#7A94AA" stroke="#4A6070" stroke-width="0.5"/>
+          <path d="M54 51 Q58 53 57 59 Q54 62 51 61 L51 53 Z" fill="#6A8498" stroke="#4A6070" stroke-width="0.5"/>
+          <!-- Visor -->
+          <path d="M29 50 Q29 43 40 42 Q51 43 51 50 L51 58 Q51 62 40 63 Q29 62 29 58 Z" fill="url(#sl-visor)" stroke="rgba(0,200,255,0.9)" stroke-width="1" filter="url(#sl-glow-c)" class="titan-visor"/>
+          <line x1="30" y1="47" x2="50" y2="47" stroke="rgba(0,210,255,0.5)" stroke-width="0.7"/>
+          <line x1="30" y1="50" x2="50" y2="50" stroke="rgba(0,210,255,0.5)" stroke-width="0.7"/>
+          <line x1="30" y1="53" x2="50" y2="53" stroke="rgba(0,210,255,0.5)" stroke-width="0.7"/>
+          <line x1="30" y1="56" x2="50" y2="56" stroke="rgba(0,210,255,0.5)" stroke-width="0.7"/>
+          <line x1="40" y1="42" x2="40" y2="63" stroke="rgba(0,200,255,0.25)" stroke-width="1"/>
+          <!-- Nose guard -->
+          <rect x="38" y="42" width="4" height="21" rx="1.5" fill="#5A7488" opacity="0.5"/>
+          <!-- Crest base -->
+          <rect x="37" y="32" width="6" height="5" rx="1.5" fill="#6A5020" stroke="#d97757" stroke-width="0.8"/>
+          <!-- Crest plume -->
+          <g class="titan-crest">
+            <path d="M40 32 Q35 22 34 14 Q37 18 38 13 Q39 20 39 28 Z" fill="url(#sl-crest)"/>
+            <path d="M40 32 Q40 20 39 12 Q41 17 42 12 Q41 20 40 28 Z" fill="#E74C3C"/>
+            <path d="M40 32 Q45 22 46 14 Q43 18 42 13 Q41 20 41 28 Z" fill="url(#sl-crest)"/>
+          </g>
+          <!-- Crest top gem -->
+          <circle cx="40" cy="34" r="2.2" fill="#d97757" stroke="#8B5010" stroke-width="0.6" filter="url(#sl-glow-g)"/>
+          <!-- Chin strap gold -->
+          <path d="M29 58 Q29 62 32 64 Q36 66 40 66 Q44 66 48 64 Q51 62 51 58" fill="none" stroke="#d97757" stroke-width="1"/>
+          <!-- Chest badge -->
+          <circle cx="40" cy="72" r="3.5" fill="#d97757" stroke="#8B5010" stroke-width="0.8" filter="url(#sl-glow-g)"/>
+          <path d="M40 69.2 L40.8 71.6 L43.2 71.6 L41.2 73.2 L42 75.6 L40 74 L38 75.6 L38.8 73.2 L36.8 71.6 L39.2 71.6 Z" fill="#FFF5CC" stroke="#8B5010" stroke-width="0.3"/>
+          <!-- Bottom deco lines -->
+          <line x1="22" y1="83" x2="40" y2="91" stroke="rgba(217,119,87,0.3)" stroke-width="0.6"/>
+          <line x1="58" y1="83" x2="40" y2="91" stroke="rgba(217,119,87,0.3)" stroke-width="0.6"/>
+        </svg>
+        </div></div>
+      </div>
+      <div class="setup-title">TITAN <span>ECOSYSTEM</span></div>
+      <div class="setup-version">v6.0 · The Largest Development Universe Ever Created</div>
+      <div class="setup-desc">
+        Configure suas API Keys para ativar o maior ecossistema de desenvolvimento já criado.<br>
+        <strong style="color:var(--copper);">🌐 100+ Integrações · 🤖 IA Avançada · ⚡ Colaboração Real-Time · 🚀 Deploy Global</strong><br>
+        <strong style="color:var(--green);">🔗 GitHub, GitLab, AWS, Azure, GCP, Blockchain, VR/AR, Web3</strong><br><br>
+        <span style="color:var(--cyan);">🌌 Marketplace com 1000+ Extensions · 📊 Analytics em Tempo Real · 🛡️ Segurança Blockchain</span><br>
+        <span style="color:var(--green);">🔒 Todas as chaves ficam salvas apenas localmente no seu navegador.</span>
+      </div>
+      <div class="setup-actions">
+        <button class="setup-btn-primary" onclick="openApiModal()">
+          <i class="fas fa-key"></i> CONFIGURAR API KEYS
+        </button>
+        <button class="setup-btn-secondary" onclick="openGithubOAuth()">
+          <i class="fab fa-github"></i> LOGIN COM GITHUB
+        </button>
+      </div>
+      <div class="setup-features">
+        <div class="feat-item"><span class="feat-icon">🌌</span><span>Ecossistema Infinito</span></div>
+        <div class="feat-item"><span class="feat-icon">🤖</span><span>IA Multi-Modelo</span></div>
+        <div class="feat-item"><span class="feat-icon">🌐</span><span>100+ Integrações</span></div>
+        <div class="feat-item"><span class="feat-icon">⚡</span><span>Colaboração Real-Time</span></div>
+        <div class="feat-item"><span class="feat-icon">🚀</span><span>Deploy Global</span></div>
+        <div class="feat-item"><span class="feat-icon">📱</span><span>Multi-Plataforma</span></div>
+        <div class="feat-item"><span class="feat-icon">🔗</span><span>Blockchain Security</span></div>
+        <div class="feat-item"><span class="feat-icon">🕶️</span><span>VR/AR Interface</span></div>
+        <div class="feat-item"><span class="feat-icon">📊</span><span>Analytics Avançado</span></div>
+        <div class="feat-item"><span class="feat-icon">🏪</span><span>Marketplace 1000+</span></div>
+        <div class="feat-item"><span class="feat-icon">🌍</span><span>Comunidade Global</span></div>
+        <div class="feat-item"><span class="feat-icon">💎</span><span>Web3 Integration</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ API KEYS MODAL ══════════════════════════════════════════ -->
+  <div id="api-modal-overlay" onclick="if(event.target===this)closeApiModal()">
+    <div id="api-modal">
+      <div class="modal-handle"></div>
+      <div class="modal-header">
+        <div>
+          <div class="modal-title"><i class="fas fa-sliders-h" style="color:var(--copper);margin-right:8px;"></i>API KEYS</div>
+          <div class="modal-subtitle">CONECTE OS SERVIÇOS · SALVO APENAS LOCALMENTE</div>
+        </div>
+        <button class="modal-close" onclick="closeApiModal()"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div class="modal-tabs-nav">
+        <button class="modal-tab active" data-section="ai" onclick="switchModalTab('ai')">🤖 AI</button>
+        <button class="modal-tab" data-section="git" onclick="switchModalTab('git')">🔀 Git</button>
+        <button class="modal-tab" data-section="cloud" onclick="switchModalTab('cloud')">☁️ Cloud</button>
+        <button class="modal-tab" data-section="deploy" onclick="switchModalTab('deploy')">🚀 Deploy</button>
+        <button class="modal-tab" data-section="database" onclick="switchModalTab('database')">🗄️ Database</button>
+        <button class="modal-tab" data-section="blockchain" onclick="switchModalTab('blockchain')">🔗 Blockchain</button>
+        <button class="modal-tab" data-section="social" onclick="switchModalTab('social')">🌐 Social</button>
+      </div>
+
+      <!-- AI -->
+      <div class="modal-section active" id="modal-section-ai">
+        <div class="api-section-title">🤖 INTELIGÊNCIA ARTIFICIAL — MULTI-MODELO <span id="status-ai" class="api-status-indicator none"></span></div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">PROVIDER PRIMÁRIO</span></div>
+          <select id="key-ai-provider" class="api-input">
+            <option value="anthropic">Anthropic Claude</option>
+            <option value="openai">OpenAI GPT</option>
+            <option value="google">Google Gemini</option>
+            <option value="meta">Meta Llama</option>
+            <option value="mistral">Mistral AI</option>
+            <option value="huggingface">Hugging Face</option>
+          </select>
+        </div>
+        <div class="api-field">
+          <div class="api-label">
+            <span class="api-label-name">ANTHROPIC_API_KEY</span>
+            <span id="text-status-anthropic" style="font-size:9px;color:var(--text-dim);">não configurada</span>
+          </div>
+          <div class="api-input-wrap">
+            <input id="key-anthropic" class="api-input" type="password" placeholder="sk-ant-api03-..." autocomplete="off" oninput="onKeyInput('anthropic')"/>
+            <button class="api-toggle-btn" onclick="toggleVisibility('key-anthropic',this)"><i class="fas fa-eye"></i></button>
+            <button class="api-test-btn" id="test-anthropic" onclick="testAnthropicKey()">TESTAR</button>
+          </div>
+        </div>
+        <div class="api-field">
+          <div class="api-label">
+            <span class="api-label-name">OPENAI_API_KEY</span>
+            <span id="text-status-openai" style="font-size:9px;color:var(--text-dim);">não configurada</span>
+          </div>
+          <div class="api-input-wrap">
+            <input id="key-openai" class="api-input" type="password" placeholder="sk-..." autocomplete="off" oninput="onKeyInput('openai')"/>
+            <button class="api-toggle-btn" onclick="toggleVisibility('key-openai',this)"><i class="fas fa-eye"></i></button>
+            <button class="api-test-btn" id="test-openai" onclick="testOpenAIKey()">TESTAR</button>
+          </div>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">MODELO PADRÃO</span></div>
+          <select id="key-model" class="api-input">
+            <option value="claude-sonnet-4-6">claude-sonnet-4-6 (recomendado)</option>
+            <option value="gpt-4o">GPT-4o</option>
+            <option value="gemini-pro">Gemini Pro</option>
+            <option value="claude-opus-4-6">claude-opus-4-6 (mais potente)</option>
+            <option value="gpt-4-turbo">GPT-4 Turbo</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- GIT -->
+      <div class="modal-section" id="modal-section-git">
+        <div class="api-section-title">🔀 SISTEMAS DE CONTROLE DE VERSÃO <span id="status-git" class="api-status-indicator none"></span></div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">PROVIDER PRIMÁRIO</span></div>
+          <select id="key-git-provider" class="api-input">
+            <option value="github">GitHub</option>
+            <option value="gitlab">GitLab</option>
+            <option value="bitbucket">Bitbucket</option>
+            <option value="azure">Azure DevOps</option>
+            <option value="aws-codecommit">AWS CodeCommit</option>
+          </select>
+        </div>
+        <div class="api-field">
+          <div class="api-label">
+            <span class="api-label-name">GITHUB_TOKEN</span>
+            <span id="text-status-github" style="font-size:9px;color:var(--text-dim);">não configurado</span>
+          </div>
+          <div class="api-input-wrap">
+            <input id="key-github" class="api-input" type="password" placeholder="ghp_..." autocomplete="off" oninput="onKeyInput('github')"/>
+            <button class="api-toggle-btn" onclick="toggleVisibility('key-github',this)"><i class="fas fa-eye"></i></button>
+            <button class="api-test-btn" id="test-github" onclick="testGithubKey()">TESTAR</button>
+          </div>
+        </div>
+        <div class="api-field">
+          <div class="api-label">
+            <span class="api-label-name">GITLAB_TOKEN</span>
+            <span id="text-status-gitlab" style="font-size:9px;color:var(--text-dim);">não configurado</span>
+          </div>
+          <div class="api-input-wrap">
+            <input id="key-gitlab" class="api-input" type="password" placeholder="glpat-..." autocomplete="off" oninput="onKeyInput('gitlab')"/>
+            <button class="api-toggle-btn" onclick="toggleVisibility('key-gitlab',this)"><i class="fas fa-eye"></i></button>
+            <button class="api-test-btn" id="test-gitlab" onclick="testGitlabKey()">TESTAR</button>
+          </div>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">REPOSITÓRIO PADRÃO</span></div>
+          <input id="key-github-repo" class="api-input" type="text" placeholder="usuario/repositorio" style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">BRANCH PADRÃO</span></div>
+          <input id="key-github-branch" class="api-input" type="text" placeholder="main" style="width:100%;"/>
+        </div>
+      </div>
+
+      <!-- CLOUD -->
+      <div class="modal-section" id="modal-section-cloud">
+        <div class="api-section-title">☁️ PLATAFORMAS CLOUD <span id="status-cloud" class="api-status-indicator none"></span></div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">AWS_ACCESS_KEY_ID</span></div>
+          <input id="key-aws-key" class="api-input" type="password" placeholder="AKIA..." style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">AWS_SECRET_ACCESS_KEY</span></div>
+          <input id="key-aws-secret" class="api-input" type="password" placeholder="..." style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">AZURE_CLIENT_ID</span></div>
+          <input id="key-azure-client" class="api-input" type="text" placeholder="uuid" style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">GCP_PROJECT_ID</span></div>
+          <input id="key-gcp-project" class="api-input" type="text" placeholder="my-project" style="width:100%;"/>
+        </div>
+      </div>
+
+      <!-- DEPLOY -->
+      <div class="modal-section" id="modal-section-deploy">
+        <div class="api-section-title">🚀 PLATAFORMAS DE DEPLOY <span id="status-deploy" class="api-status-indicator none"></span></div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">RENDER_API_KEY</span></div>
+          <input id="key-render" class="api-input" type="password" placeholder="rnd_..." style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">VERCEL_TOKEN</span></div>
+          <input id="key-vercel" class="api-input" type="password" placeholder="..." style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">NETLIFY_TOKEN</span></div>
+          <input id="key-netlify" class="api-input" type="password" placeholder="..." style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">HEROKU_API_KEY</span></div>
+          <input id="key-heroku" class="api-input" type="password" placeholder="..." style="width:100%;"/>
+        </div>
+      </div>
+
+      <!-- DATABASE -->
+      <div class="modal-section" id="modal-section-database">
+        <div class="api-section-title">🗄️ BANCOS DE DADOS <span id="status-database" class="api-status-indicator none"></span></div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">SUPABASE_URL</span></div>
+          <input id="key-supabase-url" class="api-input" type="text" placeholder="https://xxx.supabase.co" style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">SUPABASE_SERVICE_KEY</span></div>
+          <input id="key-supabase" class="api-input" type="password" placeholder="eyJ..." style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">MONGODB_URI</span></div>
+          <input id="key-mongodb" class="api-input" type="password" placeholder="mongodb://..." style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">REDIS_URL</span></div>
+          <input id="key-redis" class="api-input" type="password" placeholder="redis://..." style="width:100%;"/>
+        </div>
+      </div>
+
+      <!-- BLOCKCHAIN -->
+      <div class="modal-section" id="modal-section-blockchain">
+        <div class="api-section-title">🔗 BLOCKCHAIN & WEB3 <span id="status-blockchain" class="api-status-indicator none"></span></div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">INFURA_PROJECT_ID</span></div>
+          <input id="key-infura" class="api-input" type="password" placeholder="..." style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">ALCHEMY_API_KEY</span></div>
+          <input id="key-alchemy" class="api-input" type="password" placeholder="..." style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">ETHEREUM_PRIVATE_KEY</span></div>
+          <input id="key-eth-private" class="api-input" type="password" placeholder="0x..." style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">SOLANA_PRIVATE_KEY</span></div>
+          <input id="key-solana-private" class="api-input" type="password" placeholder="..." style="width:100%;"/>
+        </div>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="modal-section" id="modal-section-social">
+        <div class="api-section-title">🌐 REDES SOCIAIS & COMUNICAÇÃO <span id="status-social" class="api-status-indicator none"></span></div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">SLACK_BOT_TOKEN</span></div>
+          <input id="key-slack" class="api-input" type="password" placeholder="xoxb-..." style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">DISCORD_BOT_TOKEN</span></div>
+          <input id="key-discord" class="api-input" type="password" placeholder="..." style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">TWITTER_API_KEY</span></div>
+          <input id="key-twitter" class="api-input" type="password" placeholder="..." style="width:100%;"/>
+        </div>
+        <div class="api-field">
+          <div class="api-label"><span class="api-label-name">NOTION_TOKEN</span></div>
+          <input id="key-notion" class="api-input" type="password" placeholder="secret_..." style="width:100%;"/>
+        </div>
+      </div>
+
+      <div class="api-saved-banner" id="api-saved-banner"><i class="fas fa-check-circle"></i> API Keys salvas com sucesso!</div>
+      <div class="modal-actions">
+        <button class="btn-secondary" onclick="clearAllKeys()"><i class="fas fa-trash"></i> LIMPAR</button>
+        <button class="btn-primary" onclick="saveApiKeys()"><i class="fas fa-save"></i> SALVAR →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CRITICAL ALERT ═════════════════════════════════════════ -->
+  <div id="critical-alert">
+    <div class="alert-title"><i class="fas fa-exclamation-triangle"></i> ERRO CRÍTICO DETECTADO</div>
+    <div class="alert-msg" id="alert-msg"></div>
+    <div class="alert-btns">
+      <button class="alert-analyze" onclick="analyzeFromAlert()"><i class="fas fa-robot"></i> Analisar com Agente</button>
+      <button class="alert-dismiss" onclick="dismissAlert()">Fechar</button>
+    </div>
+  </div>
+
+  <!-- ══ SEARCH MODAL ════════════════════════════════════════════ -->
+  <div id="search-modal" onclick="if(event.target===this)closeGlobalSearch()">
+    <div id="search-modal-box">
+      <input id="search-input" type="text" placeholder="Buscar arquivos, tabs, skills..." autocomplete="off" onkeydown="if(event.key==='Escape')closeGlobalSearch()"/>
+      <div id="search-results"></div>
+    </div>
+  </div>
+
+  <!-- ══ HEADER ════════════════════════════════════════════════ -->
+  <header id="header">
+    <div id="header-logo">
+      <div class="logo-hex">
+        <div class="titan-icon-wrap">
+        <div class="titan-icon-3d-sm">
+        <svg viewBox="0 0 40 50" width="32" height="40" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(217,119,87,0.45))">
+          <defs>
+            <linearGradient id="hl-rim" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F5D060"/><stop offset="45%" stop-color="#d97757"/><stop offset="100%" stop-color="#8B5010"/></linearGradient>
+            <linearGradient id="hl-body" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a2e58"/><stop offset="100%" stop-color="#060c18"/></linearGradient>
+            <linearGradient id="hl-helm" x1="0%" y1="0%" x2="70%" y2="100%"><stop offset="0%" stop-color="#C8DCF0"/><stop offset="60%" stop-color="#6A8498"/><stop offset="100%" stop-color="#3A5060"/></linearGradient>
+            <linearGradient id="hl-crest" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#E74C3C"/><stop offset="100%" stop-color="#7B241C"/></linearGradient>
+            <linearGradient id="hl-visor" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="rgba(0,200,255,0.9)"/><stop offset="100%" stop-color="rgba(0,80,180,0.5)"/></linearGradient>
+            <filter id="hl-gc"><feGaussianBlur in="SourceAlpha" stdDeviation="1.2" result="b"/><feFlood flood-color="#00D4FF" flood-opacity="0.6" result="c"/><feComposite in="c" in2="b" operator="in" result="s"/><feComposite in="SourceGraphic" in2="s" operator="over"/></filter>
+            <filter id="hl-gg"><feGaussianBlur in="SourceAlpha" stdDeviation="1" result="b"/><feFlood flood-color="#d97757" flood-opacity="0.5" result="c"/><feComposite in="c" in2="b" operator="in" result="s"/><feComposite in="SourceGraphic" in2="s" operator="over"/></filter>
+          </defs>
+          <!-- Shield rim -->
+          <path d="M20 2 L37 8 L37 26 Q37 41 20 48 Q3 41 3 26 L3 8 Z" fill="url(#hl-rim)"/>
+          <!-- Shield body -->
+          <path d="M20 4 L35 10 L35 26 Q35 39 20 46 Q5 39 5 26 L5 10 Z" fill="url(#hl-body)"/>
+          <!-- Inner border -->
+          <path d="M20 6 L33 11 L33 26 Q33 37 20 44 Q7 37 7 26 L7 11 Z" fill="none" stroke="rgba(217,119,87,0.35)" stroke-width="0.6"/>
+          <!-- Crest plume -->
+          <g class="titan-crest">
+            <path d="M20 15 Q16.5 9 16 5 Q18 7.5 18.5 5 Q19 9 19.5 13 Z" fill="url(#hl-crest)"/>
+            <path d="M20 15 Q20 8 19.5 5 Q20.5 7.5 21 5 Q20.5 8 20 13 Z" fill="#E74C3C"/>
+            <path d="M20 15 Q23.5 9 24 5 Q22 7.5 21.5 5 Q21 9 20.5 13 Z" fill="url(#hl-crest)"/>
+          </g>
+          <!-- Crest base -->
+          <rect x="18" y="14" width="4" height="3" rx="1" fill="#6A5020" stroke="#d97757" stroke-width="0.5"/>
+          <!-- Top gem -->
+          <circle cx="20" cy="15.5" r="1.3" fill="#d97757" filter="url(#hl-gg)"/>
+          <!-- Helmet dome -->
+          <path d="M11 27 Q11 19 20 18 Q29 19 29 27 L27.5 30 Q23 32 20 32 Q17 32 12.5 30 Z" fill="url(#hl-helm)" stroke="#4A6070" stroke-width="0.5"/>
+          <!-- Cheeks -->
+          <path d="M12.5 25 Q10 26.5 10.5 30 Q12.5 32 14 31 L14 26 Z" fill="#6A8498" stroke="#3A5060" stroke-width="0.4"/>
+          <path d="M27.5 25 Q30 26.5 29.5 30 Q27.5 32 26 31 L26 26 Z" fill="#6A8498" stroke="#3A5060" stroke-width="0.4"/>
+          <!-- Visor -->
+          <path d="M14 25 Q14 20 20 19.5 Q26 20 26 25 L26 29 Q26 31.5 20 32 Q14 31.5 14 29 Z" fill="url(#hl-visor)" stroke="rgba(0,200,255,0.9)" stroke-width="0.7" filter="url(#hl-gc)" class="titan-visor"/>
+          <line x1="14.5" y1="23" x2="25.5" y2="23" stroke="rgba(0,210,255,0.5)" stroke-width="0.5"/>
+          <line x1="14.2" y1="25.5" x2="25.8" y2="25.5" stroke="rgba(0,210,255,0.5)" stroke-width="0.5"/>
+          <line x1="14.2" y1="28" x2="25.8" y2="28" stroke="rgba(0,210,255,0.5)" stroke-width="0.5"/>
+          <line x1="20" y1="19.5" x2="20" y2="32" stroke="rgba(0,200,255,0.22)" stroke-width="0.7"/>
+          <!-- Nose guard -->
+          <rect x="19" y="19.5" width="2" height="12.5" rx="0.8" fill="#4A6478" opacity="0.5"/>
+          <!-- Chin strap -->
+          <path d="M14 29 Q14 31.5 16 32.5 Q18 33.5 20 33.5 Q22 33.5 24 32.5 Q26 31.5 26 29" fill="none" stroke="#d97757" stroke-width="0.7"/>
+          <!-- Neck + body -->
+          <rect x="18.5" y="32" width="3" height="4" rx="1.2" fill="#9AAABB"/>
+          <rect x="14" y="35" width="12" height="8" rx="2" fill="url(#hl-helm)" opacity="0.9"/>
+          <line x1="20" y1="35" x2="20" y2="40" stroke="#3A5060" stroke-width="0.5"/>
+          <!-- Shoulders -->
+          <ellipse cx="12" cy="37" rx="3" ry="2" fill="#9AAABB" stroke="#6A8498" stroke-width="0.4"/>
+          <ellipse cx="28" cy="37" rx="3" ry="2" fill="#8A9AAB" stroke="#6A8498" stroke-width="0.4"/>
+          <!-- Chest badge -->
+          <circle cx="20" cy="39.5" r="2" fill="#d97757" filter="url(#hl-gg)"/>
+          <path d="M20 38 L20.5 39.3 L21.9 39.3 L20.8 40.2 L21.3 41.5 L20 40.6 L18.7 41.5 L19.2 40.2 L18.1 39.3 L19.5 39.3 Z" fill="#FFFADD" stroke="#8B5010" stroke-width="0.2"/>
+        </svg>
+        </div></div>
+      </div>
+      <div class="logo-text">
+        <div class="logo-title">TITAN <span id="logo-version">v5</span></div>
+        <div class="logo-sub">SUPER DEVOPS AGENT</div>
+      </div>
+    </div>
+
+    <div id="conn-status"></div>
+
+    <div id="header-right">
+      <span id="agent-status-badge"></span>
+      <button class="icon-btn" onclick="openGlobalSearch()" title="Buscar (Ctrl+K)">
+        <i class="fas fa-search"></i>
+      </button>
+      <button id="menu-toggle" class="icon-btn" onclick="toggleSidebar()" title="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <button id="config-btn" onclick="openApiModal()" title="API Keys">
+        <i class="fas fa-key"></i> <span id="config-btn-text">KEYS</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══ CONTENT ════════════════════════════════════════════════ -->
+  <div id="content">
+
+    <!-- SIDEBAR -->
+    <nav id="sidebar">
+      <div id="sidebar-header">
+        <span class="sidebar-section-label">NAVEGAÇÃO</span>
+        <button class="icon-btn sidebar-close-btn" onclick="closeSidebar()"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="tabs"></div>
+      <div id="sidebar-footer">
+        <div class="sidebar-section-label" style="margin-bottom:8px;">SKILLS</div>
+        <div id="skills-nav"></div>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR OVERLAY -->
+    <div id="sidebar-overlay" onclick="closeSidebar()"></div>
+
+    <!-- PANELS -->
+    <main id="panels">
+
+      <!-- ══ DASHBOARD ════════════════════════════════════════ -->
+      <div id="panel-dashboard" class="panel active">
+        <div class="panel-header">
+          <div class="panel-title"><span class="p-icon">⬡</span> DASHBOARD</div>
+          <div style="display:flex;gap:6px;">
+            <button class="btn-sm" onclick="refreshAllStatus()"><i class="fas fa-sync-alt"></i> REFRESH</button>
+            <button class="btn-sm btn-accent" onclick="switchTab('agent')"><i class="fas fa-robot"></i> AGENTE</button>
+          </div>
+        </div>
+        <div class="grid-metrics" id="dash-metrics"></div>
+        <div class="row-2col">
+          <div class="card">
+            <div class="card-title"><i class="fas fa-chart-bar"></i> SYSTEM METRICS</div>
+            <div id="dash-bars"></div>
+          </div>
+          <div class="card">
+            <div class="card-title"><i class="fas fa-bolt"></i> WORKFLOWS CI/CD</div>
+            <div id="workflows-list"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title"><i class="fas fa-list"></i> LOG RECENTE <button class="btn-sm ml-auto" onclick="switchTab('logs')" style="margin-left:auto;">VER TUDO</button></div>
+          <div id="dash-log-preview"></div>
+        </div>
+      </div>
+
+      <!-- ══ GITHUB ═══════════════════════════════════════════ -->
+      <div id="panel-github" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fab fa-github"></i> GITHUB</div>
+          <div style="display:flex;gap:6px;">
+            <button class="btn-sm" onclick="fetchGitHubStatus()"><i class="fas fa-sync-alt"></i> REFRESH</button>
+            <a href="#" onclick="if(STATE.ghStatus.url&&STATE.ghStatus.url!=='—')window.open(STATE.ghStatus.url,'_blank')" class="btn-sm btn-accent"><i class="fas fa-external-link-alt"></i> VER REPO</a>
+            <button class="btn-sm btn-accent" onclick="switchTab('editor')"><i class="fas fa-code"></i> EDITOR</button>
+          </div>
+        </div>
+        <div class="grid-metrics" id="github-metrics"></div>
+        <div class="row-2col">
+          <div class="card">
+            <div class="card-title"><i class="fas fa-code-branch"></i> PULL REQUESTS</div>
+            <div id="pr-list"></div>
+          </div>
+          <div class="card">
+            <div class="card-title"><i class="fas fa-bug"></i> ISSUES</div>
+            <div id="issues-list"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title"><i class="fas fa-history"></i> COMMITS RECENTES</div>
+          <div id="commits-list"></div>
+        </div>
+      </div>
+
+      <!-- ══ RENDER ════════════════════════════════════════════ -->
+      <div id="panel-render" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-server"></i> RENDER.COM</div>
+          <div style="display:flex;gap:6px;">
+            <button class="btn-sm" onclick="fetchRenderStatus()"><i class="fas fa-sync-alt"></i> REFRESH</button>
+            <button class="btn-sm btn-accent" onclick="openApiModal();switchModalTab('render')"><i class="fas fa-plus"></i> CONFIGURAR</button>
+          </div>
+        </div>
+        <div class="grid-metrics" id="render-metrics"></div>
+        <div class="row-2col">
+          <div class="card">
+            <div class="card-title"><i class="fas fa-chart-line"></i> MÉTRICAS</div>
+            <div id="render-bars"></div>
+          </div>
+          <div class="card">
+            <div class="card-title"><i class="fas fa-rocket"></i> AÇÕES</div>
+            <div id="deploys-list">
+              <div class="empty-state"><span class="empty-text">Use o Agente para gerenciar deploys</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ SUPABASE ══════════════════════════════════════════ -->
+      <div id="panel-supabase" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-database"></i> SUPABASE</div>
+          <div style="display:flex;gap:6px;">
+            <button class="btn-sm" onclick="fetchSupabaseStatus()"><i class="fas fa-sync-alt"></i> REFRESH</button>
+            <button class="btn-sm btn-accent" onclick="openApiModal();switchModalTab('supabase')"><i class="fas fa-plug"></i> CONFIGURAR</button>
+          </div>
+        </div>
+        <div class="grid-metrics" id="sb-metrics"></div>
+        <div class="card">
+          <div class="card-title"><i class="fas fa-table"></i> TABELAS</div>
+          <div id="tables-list">
+            <div class="empty-state"><span class="empty-text">Configure Supabase para ver tabelas</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ AGENT ═════════════════════════════════════════════ -->
+      <div id="panel-agent" class="panel" style="padding:0;">
+        <div id="agent-section">
+          <div id="agent-toolbar">
+            <div class="agent-title">
+              <div class="agent-dot"></div>
+              <span>TITAN AGENT</span>
+              <span id="agent-model-badge" class="agent-model-tag"></span>
+            </div>
+            <div id="quick-prompts">
+              <button class="quick-btn" onclick="setAgentPrompt('Liste os arquivos do repositório')"><i class="fas fa-folder"></i> Arquivos</button>
+              <button class="quick-btn" onclick="setAgentPrompt('Qual é o status completo do CI/CD e workflows?')"><i class="fas fa-bolt"></i> CI Status</button>
+              <button class="quick-btn" onclick="setAgentPrompt('Liste os PRs abertos com detalhes')"><i class="fas fa-code-branch"></i> PRs</button>
+              <button class="quick-btn" onclick="setAgentPrompt('Liste as issues abertas e sugira priorizações')"><i class="fas fa-bug"></i> Issues</button>
+              <button class="quick-btn" onclick="setAgentPrompt('Verifique os logs de erro do Render e sugira correções')"><i class="fas fa-server"></i> Render</button>
+              <button class="quick-btn" onclick="setAgentPrompt('Liste as tabelas do Supabase e descreva o schema')"><i class="fas fa-database"></i> Supabase</button>
+              <button class="quick-btn" onclick="setAgentPrompt('Analise o repositório completo e sugira melhorias de código e arquitetura')"><i class="fas fa-magic"></i> Analisar</button>
+              <button class="quick-btn" onclick="setAgentPrompt('Crie um relatório completo de status do projeto em markdown')"><i class="fas fa-file-alt"></i> Relatório</button>
+            </div>
+            <button class="btn-sm" onclick="clearAgentHistory()" style="flex-shrink:0;"><i class="fas fa-trash"></i></button>
+          </div>
+          <div id="chat-window">
+            <div id="chat-messages"></div>
+            <div id="agent-thinking">
+              <div class="thinking-ring"></div>
+              <div class="thinking-dots"><span></span><span></span><span></span></div>
+              <span>Agente processando...</span>
+            </div>
+            <div id="chat-input-row">
+              <div class="input-wrap">
+                <textarea id="agent-input"
+                  placeholder="Descreva o que deseja fazer... (Enter envia, Shift+Enter = nova linha)"
+                  rows="1"
+                  oninput="agentInputResize(this)"
+                  onkeydown="agentInputKeydown(event)"></textarea>
+                <div class="input-actions">
+                  <button class="input-attach-btn" onclick="attachFile()" title="Anexar arquivo"><i class="fas fa-paperclip"></i></button>
+                </div>
+              </div>
+              <button id="agent-send" onclick="sendAgent()" title="Enviar (Enter)">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ EDITOR ════════════════════════════════════════════ -->
+      <div id="panel-editor" class="panel editor-panel">
+        <div id="editor-container">
+
+          <!-- Editor Topbar -->
+          <div id="editor-topbar">
+            <div class="editor-tb-left">
+              <div class="editor-logo"><i class="fas fa-code"></i> CODE EDITOR</div>
+              <div id="editor-repo-info"></div>
+            </div>
+            <div class="editor-tb-right">
+              <button class="btn-sm" onclick="fetchGitHubFileTree('')" title="Refresh"><i class="fas fa-sync-alt"></i></button>
+              <button class="btn-sm" onclick="toggleFindReplace()" title="Buscar/Substituir (Ctrl+H)"><i class="fas fa-search"></i></button>
+              <button class="btn-sm" onclick="openRepoSwitcher()" title="Trocar repositório"><i class="fas fa-exchange-alt"></i> REPO</button>
+              <button class="btn-sm btn-accent" id="editor-preview-btn" onclick="previewProject()" title="Preview do projeto"><i class="fas fa-external-link-alt"></i> PREVIEW</button>
+            </div>
+          </div>
+
+          <!-- Find/Replace Bar -->
+          <div id="find-replace-bar" style="display:none;">
+            <span style="font-size:9px;color:var(--text-dim);white-space:nowrap;">BUSCAR:</span>
+            <input id="find-input" type="text" placeholder="Texto..." onkeydown="if(event.key==='Enter')findInEditor()"/>
+            <span style="font-size:9px;color:var(--text-dim);white-space:nowrap;">SUBSTITUIR:</span>
+            <input id="replace-input" type="text" placeholder="Por..."/>
+            <button class="btn-sm" onclick="findInEditor()"><i class="fas fa-arrow-right"></i></button>
+            <button class="btn-sm" onclick="replaceInEditor()">1x</button>
+            <button class="btn-sm" onclick="replaceAllInEditor()">Tudo</button>
+            <button class="btn-sm" onclick="toggleFindReplace()"><i class="fas fa-times"></i></button>
+          </div>
+
+          <!-- GitHub Auth Banner (shown when no token) -->
+          <div id="github-auth-banner" style="display:none;">
+            <div class="github-auth-card">
+              <i class="fab fa-github" style="font-size:36px;color:var(--text-mid);margin-bottom:12px;display:block;"></i>
+              <div style="font-family:var(--font-ui);font-size:14px;font-weight:800;color:var(--text);margin-bottom:8px;">Conecte seu GitHub</div>
+              <div style="font-size:11px;color:var(--text-mid);margin-bottom:16px;line-height:1.7;">
+                Configure seu token em <strong style="color:var(--accent);">⚙ API KEYS</strong> ou use o login OAuth
+                para acessar seus repositórios, navegar arquivos e editar código diretamente.
+              </div>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+                <button class="github-oauth-btn" onclick="openGithubOAuth()" style="flex:none;padding:10px 16px;font-size:12px;"><i class="fab fa-github"></i> Login com GitHub OAuth</button>
+                <button class="btn-secondary" onclick="openApiModal()" style="height:42px;padding:0 16px;"><i class="fas fa-key"></i> Inserir Token Manual</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repo Switcher Panel -->
+          <div id="repo-switcher">
+            <div class="repo-switcher-card">
+              <div class="card-title" style="margin-bottom:10px;"><i class="fab fa-github"></i> TROCAR REPOSITÓRIO</div>
+              <div class="api-field">
+                <input id="repo-switch-input" class="api-input" type="text" placeholder="usuario/repositorio" style="width:100%;" onkeydown="if(event.key==='Enter')switchRepo()"/>
+              </div>
+              <div id="user-repos-list"></div>
+              <div style="display:flex;gap:8px;margin-top:10px;">
+                <button class="btn-secondary" onclick="closeRepoSwitcher()">CANCELAR</button>
+                <button class="btn-primary" onclick="switchRepo()"><i class="fas fa-check"></i> TROCAR</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Editor Layout -->
+          <div id="editor-layout">
+
+            <!-- Left Panel: Tools & Skills -->
+            <div id="editor-left-panel">
+              <div class="left-panel-tabs">
+                <button class="lp-tab active" onclick="switchLeftPanel('tools',this)"><i class="fas fa-tools"></i> TOOLS</button>
+                <button class="lp-tab" onclick="switchLeftPanel('skills',this)"><i class="fas fa-puzzle-piece"></i> SKILLS</button>
+                <button class="lp-tab" onclick="switchLeftPanel('terminal',this)"><i class="fas fa-terminal"></i> TERMINAL</button>
+              </div>
+              <div id="lp-tools" class="lp-content active">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-wrench"></i> FERRAMENTAS</div>
+                <div class="tool-item" onclick="formatCode()"><i class="fas fa-align-left"></i> Formatar Código</div>
+                <div class="tool-item" onclick="toggleAiBar()"><i class="fas fa-magic"></i> Edição com IA</div>
+                <div class="tool-item" onclick="searchInCode()"><i class="fas fa-search"></i> Buscar no Código</div>
+                <div class="tool-item" onclick="replaceInCode()"><i class="fas fa-exchange-alt"></i> Substituir</div>
+                <div class="tool-item" onclick="toggleComment()"><i class="fas fa-comment"></i> Toggle Comment</div>
+                <div class="tool-item" onclick="duplicateLine()"><i class="fas fa-copy"></i> Duplicar Linha</div>
+                <div class="tool-item" onclick="deleteLine()"><i class="fas fa-trash"></i> Deletar Linha</div>
+                <div class="tool-item" onclick="moveLineUp()"><i class="fas fa-arrow-up"></i> Mover Linha Cima</div>
+                <div class="tool-item" onclick="moveLineDown()"><i class="fas fa-arrow-down"></i> Mover Linha Baixo</div>
+              </div>
+              <div id="lp-skills" class="lp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-brain"></i> SKILLS IA</div>
+                <div id="skills-mini-grid"></div>
+              </div>
+              <div id="lp-terminal" class="lp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-code"></i> TERMINAL</div>
+                <div id="mini-terminal-output"></div>
+                <input id="mini-terminal-input" class="api-input" type="text" placeholder="Comando..." onkeydown="if(event.key==='Enter')runMiniTerminalCommand()"/>
+              </div>
+            </div>
+
+            <!-- File Explorer -->
+            <div id="file-explorer">
+              <div id="file-explorer-header">
+                <span><i class="fas fa-folder-open"></i> EXPLORER</span>
+                <div style="display:flex;gap:4px;">
+                  <button class="icon-btn" onclick="fetchGitHubFileTree(STATE._fileTreePath||'')" title="Refresh" style="width:22px;height:22px;font-size:10px;"><i class="fas fa-sync-alt"></i></button>
+                  <button class="icon-btn" onclick="addNewFile()" title="Novo arquivo" style="width:22px;height:22px;font-size:10px;"><i class="fas fa-plus"></i></button>
+                  <button class="icon-btn" onclick="addNewFolder()" title="Nova pasta" style="width:22px;height:22px;font-size:10px;"><i class="fas fa-folder-plus"></i></button>
+                </div>
+              </div>
+              <div id="explorer-breadcrumb"></div>
+              <div id="file-list"></div>
+              <div id="file-explorer-footer">
+                <div id="git-branch-display"><i class="fas fa-code-branch"></i> <span id="current-branch-name">main</span></div>
+                <button class="btn-sm" onclick="switchBranch()" style="height:22px;font-size:8px;padding:0 6px;"><i class="fas fa-exchange-alt"></i></button>
+              </div>
+            </div>
+
+            <!-- Editor Main -->
+            <div id="editor-main">
+              <div id="editor-tabs-bar" class="editor-tabs-list"></div>
+              <div id="editor-toolbar">
+                <span id="editor-filename">Nenhum arquivo</span>
+                <span id="editor-modified-badge"></span>
+                <div style="display:flex;gap:4px;margin-left:auto;">
+                  <button id="editor-ai-btn" onclick="toggleAiBar()" title="AI Edit (IA)"><i class="fas fa-magic"></i></button>
+                  <button id="editor-format-btn" onclick="formatCode()" title="Formatar código"><i class="fas fa-align-left"></i></button>
+                  <button id="editor-commit-btn" onclick="commitCurrentFile()"><i class="fas fa-upload"></i> COMMIT</button>
+                </div>
+              </div>
+              <div id="editor-content-area">
+                <div id="line-numbers">1</div>
+                <textarea id="code-editor" spellcheck="false"
+                  oninput="onEditorInput()"
+                  onkeydown="handleEditorKeydown(event)"
+                  onscroll="syncScroll()"
+                  placeholder="← Selecione um arquivo no Explorer&#10;ou configure GitHub em ⚙ API KEYS&#10;&#10;Atalhos:&#10;Ctrl+S → Salvar&#10;Ctrl+Enter → Commit&#10;Ctrl+/ → Toggle Comment&#10;Ctrl+H → Buscar/Substituir&#10;Tab → Indentar"></textarea>
+              </div>
+              <div id="ai-edit-bar" style="display:none;">
+                <input id="ai-edit-instruction" placeholder="Descreva a alteração com IA... (ex: adicione tratamento de erros)" autocomplete="off" onkeydown="if(event.key==='Enter')applyAiEdit()"/>
+                <button class="ai-edit-btn" onclick="applyAiEdit()"><i class="fas fa-magic"></i> APLICAR</button>
+                <button class="ai-edit-close" onclick="toggleAiBar()"><i class="fas fa-times"></i></button>
+              </div>
+              <div id="editor-footer">
+                <span class="stat"><i class="fas fa-code-branch"></i> <span id="footer-branch">main</span></span>
+                <span class="stat"><span id="editor-stat-lines">0</span> linhas</span>
+                <span class="stat"><span id="editor-stat-chars">0</span> chars</span>
+                <span class="stat"><span id="editor-stat-words">0</span> palavras</span>
+                <span class="stat" id="editor-lang-badge"></span>
+                <span id="editor-status"></span>
+                <button class="editor-save-btn" onclick="saveCurrentFile()"><i class="fas fa-save"></i> SALVAR</button>
+              </div>
+            </div>
+
+            <!-- Right Panel: Multi-Tool -->
+            <div id="editor-right-panel">
+              <div class="right-panel-tabs">
+                <button class="rp-tab active" onclick="switchRightPanel('git',this)"><i class="fas fa-code-branch"></i> GIT</button>
+                <button class="rp-tab" onclick="switchRightPanel('preview',this)"><i class="fas fa-eye"></i> PREVIEW</button>
+                <button class="rp-tab" onclick="switchRightPanel('analytics',this)"><i class="fas fa-chart-line"></i> ANALYTICS</button>
+                <button class="rp-tab" onclick="switchRightPanel('collaboration',this)"><i class="fas fa-users"></i> COLAB</button>
+                <button class="rp-tab" onclick="switchRightPanel('marketplace',this)"><i class="fas fa-store"></i> MARKET</button>
+                <button class="rp-tab" onclick="switchRightPanel('blockchain',this)"><i class="fas fa-link"></i> BLOCKCHAIN</button>
+                <button class="rp-tab" onclick="switchRightPanel('quantum',this)"><i class="fas fa-atom"></i> QUANTUM</button>
+                <button class="rp-tab" onclick="switchRightPanel('neural',this)"><i class="fas fa-brain"></i> NEURAL</button>
+                <button class="rp-tab" onclick="switchRightPanel('iot',this)"><i class="fas fa-microchip"></i> IoT</button>
+                <button class="rp-tab" onclick="switchRightPanel('gamedev',this)"><i class="fas fa-gamepad"></i> GAME</button>
+                <button class="rp-tab" onclick="switchRightPanel('audio',this)"><i class="fas fa-music"></i> AUDIO</button>
+                <button class="rp-tab" onclick="switchRightPanel('video',this)"><i class="fas fa-video"></i> VIDEO</button>
+                <button class="rp-tab" onclick="switchRightPanel('nlp',this)"><i class="fas fa-language"></i> NLP</button>
+                <button class="rp-tab" onclick="switchRightPanel('science',this)"><i class="fas fa-flask"></i> SCIENCE</button>
+                <button class="rp-tab" onclick="switchRightPanel('robotics',this)"><i class="fas fa-robot"></i> ROBOTICS</button>
+                <button class="rp-tab" onclick="switchRightPanel('space',this)"><i class="fas fa-rocket"></i> SPACE</button>
+              </div>
+              <div id="rp-git" class="rp-content active">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-history"></i> COMMITS</div>
+                <div id="editor-commits-list"></div>
+              </div>
+              <div id="rp-preview" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-external-link-alt"></i> PREVIEW</div>
+                <div id="preview-url-bar">
+                  <input id="preview-url-input" type="text" placeholder="https://meu-projeto.pages.dev" class="api-input"/>
+                  <button class="btn-sm btn-accent" onclick="openPreviewUrl()"><i class="fas fa-external-link-alt"></i></button>
+                </div>
+                <button class="btn-sm" onclick="openProjectInBrowser()" style="width:100%;margin-bottom:8px;justify-content:center;"><i class="fas fa-globe"></i> Abrir em Nova Aba</button>
+                <iframe id="preview-frame" sandbox="allow-scripts allow-same-origin allow-forms" title="Preview"></iframe>
+              </div>
+              <div id="rp-analytics" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-chart-bar"></i> ANALYTICS</div>
+                <canvas id="analytics-canvas" width="300" height="200"></canvas>
+              </div>
+              <div id="rp-collaboration" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-comments"></i> COLABORAÇÃO</div>
+                <div id="collaboration-mini-users"></div>
+                <div id="collaboration-mini-chat"></div>
+              </div>
+              <div id="rp-marketplace" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-shopping-cart"></i> MARKETPLACE</div>
+                <div id="marketplace-mini-grid"></div>
+              </div>
+              <div id="rp-blockchain" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-coins"></i> BLOCKCHAIN</div>
+                <div id="blockchain-mini-status"></div>
+              </div>
+              <div id="rp-quantum" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-atom"></i> QUANTUM COMPUTING</div>
+                <div id="quantum-circuit-builder">
+                  <div class="quantum-mini-canvas" id="quantum-mini-canvas">
+                    <div class="circuit-placeholder">
+                      <i class="fas fa-atom"></i>
+                      <p>Quantum Circuit</p>
+                      <small>Build & simulate</small>
+                    </div>
+                  </div>
+                  <div class="quantum-mini-gates">
+                    <div class="gate-mini" data-gate="h">H</div>
+                    <div class="gate-mini" data-gate="x">X</div>
+                    <div class="gate-mini" data-gate="cx">CNOT</div>
+                  </div>
+                </div>
+              </div>
+              <div id="rp-neural" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-brain"></i> NEURAL NETWORKS</div>
+                <div id="neural-network-builder">
+                  <div class="neural-mini-canvas" id="neural-mini-canvas">
+                    <div class="network-placeholder">
+                      <i class="fas fa-brain"></i>
+                      <p>Neural Network</p>
+                      <small>Design & train</small>
+                    </div>
+                  </div>
+                  <div class="neural-mini-layers">
+                    <div class="layer-mini" data-layer="dense">Dense</div>
+                    <div class="layer-mini" data-layer="conv2d">Conv2D</div>
+                    <div class="layer-mini" data-layer="lstm">LSTM</div>
+                  </div>
+                </div>
+              </div>
+              <div id="rp-iot" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-microchip"></i> INTERNET OF THINGS</div>
+                <div id="iot-device-manager">
+                  <div class="iot-device-list">
+                    <div class="iot-device-item" data-device="arduino">
+                      <i class="fas fa-microchip"></i>
+                      <span>Arduino Uno</span>
+                      <span class="device-status online">Online</span>
+                    </div>
+                    <div class="iot-device-item" data-device="raspberry">
+                      <i class="fab fa-raspberry-pi"></i>
+                      <span>Raspberry Pi</span>
+                      <span class="device-status offline">Offline</span>
+                    </div>
+                  </div>
+                  <div class="iot-sensor-data">
+                    <div class="sensor-reading">
+                      <span class="sensor-label">Temperature:</span>
+                      <span class="sensor-value">23.5°C</span>
+                    </div>
+                    <div class="sensor-reading">
+                      <span class="sensor-label">Humidity:</span>
+                      <span class="sensor-value">65%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="rp-gamedev" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-gamepad"></i> GAME DEVELOPMENT</div>
+                <div id="game-dev-studio">
+                  <div class="game-mini-canvas" id="game-mini-canvas">
+                    <div class="game-placeholder">
+                      <i class="fas fa-gamepad"></i>
+                      <p>Game Canvas</p>
+                      <small>Real-time preview</small>
+                    </div>
+                  </div>
+                  <div class="game-assets-mini">
+                    <div class="asset-mini">
+                      <i class="fas fa-image"></i>
+                      <span>Player</span>
+                    </div>
+                    <div class="asset-mini">
+                      <i class="fas fa-music"></i>
+                      <span>BGM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="rp-audio" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-music"></i> AUDIO PROCESSING</div>
+                <div id="audio-workstation">
+                  <div class="audio-waveform-mini" id="audio-waveform-mini">
+                    <div class="waveform-placeholder">
+                      <i class="fas fa-music"></i>
+                      <p>Audio Waveform</p>
+                      <small>Load & process</small>
+                    </div>
+                  </div>
+                  <div class="audio-controls-mini">
+                    <button class="btn-audio-mini" onclick="playAudioMini()"><i class="fas fa-play"></i></button>
+                    <button class="btn-audio-mini" onclick="pauseAudioMini()"><i class="fas fa-pause"></i></button>
+                    <input type="range" min="0" max="100" value="50" id="volume-mini-slider">
+                  </div>
+                </div>
+              </div>
+              <div id="rp-video" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-video"></i> VIDEO PROCESSING</div>
+                <div id="video-workstation">
+                  <div class="video-mini-canvas" id="video-mini-canvas">
+                    <div class="video-placeholder">
+                      <i class="fas fa-video"></i>
+                      <p>Video Canvas</p>
+                      <small>Process & edit</small>
+                    </div>
+                  </div>
+                  <div class="video-filters-mini">
+                    <div class="filter-mini" data-filter="blur">Blur</div>
+                    <div class="filter-mini" data-filter="brightness">Bright</div>
+                    <div class="filter-mini" data-filter="contrast">Contrast</div>
+                  </div>
+                </div>
+              </div>
+              <div id="rp-nlp" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-language"></i> NATURAL LANGUAGE</div>
+                <div id="nlp-processor">
+                  <textarea id="nlp-mini-input" placeholder="Enter text for analysis..." rows="3"></textarea>
+                  <div class="nlp-results-mini" id="nlp-results-mini">
+                    <div class="analysis-result">
+                      <span class="result-label">Sentiment:</span>
+                      <span class="result-value">Positive</span>
+                    </div>
+                    <div class="analysis-result">
+                      <span class="result-label">Entities:</span>
+                      <span class="result-value">3 found</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="rp-science" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-flask"></i> SCIENTIFIC COMPUTING</div>
+                <div id="science-calculator">
+                  <div class="plot-mini-canvas" id="plot-mini-canvas">
+                    <div class="plot-placeholder">
+                      <i class="fas fa-chart-line"></i>
+                      <p>Data Plot</p>
+                      <small>Visualize data</small>
+                    </div>
+                  </div>
+                  <div class="calc-tools-mini">
+                    <div class="tool-mini" data-tool="calculator">Calc</div>
+                    <div class="tool-mini" data-tool="statistics">Stats</div>
+                    <div class="tool-mini" data-tool="matrix">Matrix</div>
+                  </div>
+                </div>
+              </div>
+              <div id="rp-robotics" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-robot"></i> ROBOTICS CONTROL</div>
+                <div id="robotics-control">
+                  <div class="robot-mini-viz" id="robot-mini-viz">
+                    <div class="robot-placeholder">
+                      <i class="fas fa-robot"></i>
+                      <p>Robot Control</p>
+                      <small>3D visualization</small>
+                    </div>
+                  </div>
+                  <div class="robot-controls-mini">
+                    <button class="btn-robot-mini" onclick="moveForwardMini()"><i class="fas fa-arrow-up"></i></button>
+                    <div class="robot-row">
+                      <button class="btn-robot-mini" onclick="moveLeftMini()"><i class="fas fa-arrow-left"></i></button>
+                      <button class="btn-robot-mini" onclick="stopRobotMini()"><i class="fas fa-stop"></i></button>
+                      <button class="btn-robot-mini" onclick="moveRightMini()"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <button class="btn-robot-mini" onclick="moveBackwardMini()"><i class="fas fa-arrow-down"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div id="rp-space" class="rp-content">
+                <div class="card-title" style="margin-bottom:8px;"><i class="fas fa-rocket"></i> SPACE TECHNOLOGY</div>
+                <div id="space-tracking">
+                  <div class="orbit-mini-canvas" id="orbit-mini-canvas">
+                    <div class="orbit-placeholder">
+                      <i class="fas fa-rocket"></i>
+                      <p>Orbital Tracking</p>
+                      <small>Satellite monitoring</small>
+                    </div>
+                  </div>
+                  <div class="satellite-info-mini">
+                    <div class="satellite-mini">
+                      <span class="sat-name">ISS</span>
+                      <span class="sat-altitude">408 km</span>
+                      <span class="sat-status tracking">Tracking</span>
+                    </div>
+                    <div class="satellite-mini">
+                      <span class="sat-name">Starlink</span>
+                      <span class="sat-altitude">550 km</span>
+                      <span class="sat-status tracking">Tracking</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /editor-layout -->
+        </div>
+      </div>
+
+      <!-- ══ LOGS ═══════════════════════════════════════════════ -->
+      <div id="panel-logs" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-terminal"></i> LOGS DO SISTEMA</div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <span id="log-count-badge2" class="badge-count"></span>
+            <button class="btn-sm" onclick="exportLogs()"><i class="fas fa-download"></i> EXPORTAR</button>
+            <button class="btn-sm" onclick="clearLogs()"><i class="fas fa-trash"></i> LIMPAR</button>
+          </div>
+        </div>
+        <div class="card" style="padding:10px;">
+          <div class="log-filters">
+            <button class="log-filter-btn active" onclick="filterLogs('all',this)">TODOS</button>
+            <button class="log-filter-btn" onclick="filterLogs('info',this)">INFO</button>
+            <button class="log-filter-btn" onclick="filterLogs('success',this)">SUCCESS</button>
+            <button class="log-filter-btn" onclick="filterLogs('warn',this)">WARN</button>
+            <button class="log-filter-btn" onclick="filterLogs('error',this)">ERROR</button>
+            <button class="log-filter-btn" onclick="filterLogs('agent',this)">AGENT</button>
+          </div>
+          <div id="log-scroll" class="log-scroll-area"></div>
+        </div>
+      </div>
+
+      <!-- ══ ERRORS ══════════════════════════════════════════════ -->
+      <div id="panel-errors" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-exclamation-triangle"></i> <span id="errors-title">ERROS</span></div>
+          <button class="btn-sm btn-danger" onclick="clearErrors()"><i class="fas fa-trash"></i> LIMPAR</button>
+        </div>
+        <div id="errors-list"></div>
+      </div>
+
+      <!-- ══ APPROVALS ════════════════════════════════════════════ -->
+      <div id="panel-approvals" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-shield-alt"></i> AÇÕES PENDENTES</div>
+          <span id="pending-count" class="badge-count yellow"></span>
+        </div>
+        <div id="approvals-list"></div>
+      </div>
+
+      <!-- ══ CLAW v6 — FUSÃO NGA + CLAW CODE ═══════════════════════════ -->
+      <div id="panel-claw" class="panel" style="padding:0;">
+        <div class="claw-tab-header">
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+            <div>
+              <div class="claw-tab-title">
+                <i class="fas fa-bolt" style="color:#9c7df5;margin-right:8px;"></i>TITAN v6 — Fusão Nga + Claw Code
+              </div>
+              <div class="claw-tab-subtitle">ClawBridge · MemoryEngine · CostTracker · AutonomousLoop</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <span class="claw-version-badge"><i class="fas fa-code-branch"></i> v6.0-fused</span>
+              <span id="claw-status-badge"></span>
+              <span id="cost-badge" onclick="switchTab('claw')" title="Custo hoje"></span>
+              <span id="loop-status-indicator"></span>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding:20px;display:flex;flex-direction:column;gap:20px;">
+
+          <!-- FLUXO DE ARQUITETURA -->
+          <div>
+            <div class="loop-section-title" style="margin-bottom:8px;">Arquitetura completa — fluxo do agente autônomo</div>
+            <div class="fusion-flow">
+              <div class="fusion-flow-step active" onclick="setAgentPrompt('Como usar a Nga UI como interface do agente autônomo v6?')">
+                <div class="fusion-flow-icon">🖥️</div>
+                <div class="fusion-flow-title">Nga UI</div>
+                <div class="fusion-flow-sub">Frontend / chat</div>
+              </div>
+              <div class="fusion-flow-step" onclick="setAgentPrompt('Como o agent.js do TITAN v6 processa intenções com memória persistente?')">
+                <div class="fusion-flow-icon">🤖</div>
+                <div class="fusion-flow-title">Agent.js</div>
+                <div class="fusion-flow-sub">Loop agentic</div>
+              </div>
+              <div class="fusion-flow-step" onclick="switchTab('claw');setTimeout(()=>document.getElementById('claw-provider-section')?.scrollIntoView({behavior:'smooth'}),100)">
+                <div class="fusion-flow-icon">🔌</div>
+                <div class="fusion-flow-title">ClawBridge</div>
+                <div class="fusion-flow-sub">Claude/Ollama/Claw</div>
+              </div>
+              <div class="fusion-flow-step" onclick="setAgentPrompt('Quais são as 32 tools do TITAN v6 e como usá-las?')">
+                <div class="fusion-flow-icon">🛠️</div>
+                <div class="fusion-flow-title">32 Tools</div>
+                <div class="fusion-flow-sub">16 read + 10 write + 6 claw</div>
+              </div>
+              <div class="fusion-flow-step" onclick="setAgentPrompt('Como a memória cross-sessão do TITAN v6 funciona?')">
+                <div class="fusion-flow-icon">🧠</div>
+                <div class="fusion-flow-title">MemoryEngine</div>
+                <div class="fusion-flow-sub">Cross-sessão</div>
+              </div>
+              <div class="fusion-flow-step" onclick="setAgentPrompt('Como o loop autônomo do TITAN v6 funciona — trigger, plan, execute, deploy?')">
+                <div class="fusion-flow-icon">🤖</div>
+                <div class="fusion-flow-title">Loop Autônomo</div>
+                <div class="fusion-flow-sub">plan→exec→test→deploy</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TOOLS RÁPIDAS DO CLAW -->
+          <div>
+            <div class="loop-section-title" style="margin-bottom:8px;">Ferramentas Claw Code — acesso rápido</div>
+            <div class="claw-quick-tools">
+              <button class="btn-claw-tool btn-claw-tool--ultraplan" onclick="triggerClawTool('ultraplan')">
+                <i class="fas fa-brain"></i> UltraPlan
+              </button>
+              <button class="btn-claw-tool btn-claw-tool--bughunter" onclick="triggerClawTool('bughunter')">
+                <i class="fas fa-bug"></i> BugHunter
+              </button>
+              <button class="btn-claw-tool btn-claw-tool--teleport" onclick="triggerClawTool('teleport')">
+                <i class="fas fa-crosshairs"></i> Teleport
+              </button>
+              <button class="btn-claw-tool btn-claw-tool--memory" onclick="triggerClawTool('memread')">
+                <i class="fas fa-memory"></i> Ler Memória
+              </button>
+              <button class="btn-claw-tool btn-claw-tool--provider" onclick="triggerClawTool('provider')">
+                <i class="fas fa-exchange-alt"></i> Provider
+              </button>
+              <button class="btn-claw-tool btn-claw-tool--loop" onclick="switchTab('claw');setTimeout(()=>document.getElementById('claw-loop-section')?.scrollIntoView({behavior:'smooth'}),100)">
+                <i class="fas fa-broadcast-tower"></i> Loop Autônomo
+              </button>
+            </div>
+          </div>
+
+          <!-- PROVIDER SELECTOR -->
+          <div id="claw-provider-section">
+            <div class="loop-section-title" style="margin-bottom:8px;">Provider LLM — multi-backend</div>
+            <div class="provider-selector">
+              <span style="font-size:11px;color:#6888aa;margin-right:4px;">Backend:</span>
+              <button class="provider-btn provider-btn--claude" id="pb-claude" onclick="clawSetMode('claude');updateProviderBtns()">
+                <i class="fas fa-cloud"></i> Claude API
+              </button>
+              <span class="provider-sep">|</span>
+              <button class="provider-btn provider-btn--ollama" id="pb-ollama" onclick="clawSetMode('ollama');updateProviderBtns()">
+                <i class="fas fa-brain"></i> Ollama local
+              </button>
+              <span class="provider-sep">|</span>
+              <button class="provider-btn provider-btn--claw" id="pb-claw" onclick="clawSetMode('claw-local');updateProviderBtns()">
+                <i class="fas fa-robot"></i> Claw CLI
+              </button>
+              <button onclick="clawHealthCheck().then(updateProviderBtns)" style="margin-left:auto;background:none;border:1px solid #192840;color:#6888aa;border-radius:5px;padding:4px 10px;font-size:10px;cursor:pointer;">
+                <i class="fas fa-sync"></i> Verificar
+              </button>
+            </div>
+            <div id="claw-models-list" style="font-size:11px;color:#6888aa;padding:4px 2px;"></div>
+          </div>
+
+          <div class="claw-grid-2">
+            <!-- ROADMAP FASES -->
+            <div>
+              <div class="loop-section-title" style="margin-bottom:8px;">Roadmap — fases de evolução</div>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+
+                <div class="phase-card phase-card--wip" onclick="setAgentPrompt('Me dê o passo a passo completo da Fase 1: conectar Claw ao Nga com Ollama local gratuito')">
+                  <div class="phase-number">1</div>
+                  <div class="phase-label phase-label--wip">Em andamento</div>
+                  <div class="phase-title">Backend grátis</div>
+                  <ul class="phase-items">
+                    <li class="done">ClawBridge implementado</li>
+                    <li class="done">Detecção de Ollama e Claw local</li>
+                    <li class="done">Fallback automático para Claude API</li>
+                    <li>Instalar Ollama + qwen2.5-coder</li>
+                    <li>Testar loop com Ollama</li>
+                  </ul>
+                  <div class="roadmap-progress">
+                    <div class="roadmap-progress-fill" style="width:60%;background:linear-gradient(90deg,#f5a623,#d97757);"></div>
+                  </div>
+                </div>
+
+                <div class="phase-card phase-card--next" onclick="setAgentPrompt('Me dê o passo a passo da Fase 2: memória persistente e unificação de tools entre Nga e Claw')">
+                  <div class="phase-number">2</div>
+                  <div class="phase-label phase-label--next">Próxima</div>
+                  <div class="phase-title">Memória + Unificação</div>
+                  <ul class="phase-items">
+                    <li class="done">MemoryEngine cross-sessão ativo</li>
+                    <li class="done">6 novas tools Claw no agent.js</li>
+                    <li class="done">CostTracker por provider</li>
+                    <li>Unificar tool pool com execution_registry</li>
+                    <li>Persistir contexto entre reloads</li>
+                  </ul>
+                  <div class="roadmap-progress">
+                    <div class="roadmap-progress-fill" style="width:45%;background:linear-gradient(90deg,#2f78f0,#18d4f0);"></div>
+                  </div>
+                </div>
+
+                <div class="phase-card phase-card--future" onclick="setAgentPrompt('Me dê o passo a passo da Fase 3: loop 100% autônomo com trigger de issues, testes e deploy automático')">
+                  <div class="phase-number">3</div>
+                  <div class="phase-label phase-label--future">Objetivo final</div>
+                  <div class="phase-title">Loop autônomo</div>
+                  <ul class="phase-items">
+                    <li class="done">AutonomousLoop implementado</li>
+                    <li class="done">Watcher de issues GitHub</li>
+                    <li class="done">Loop plan→execute→test→deploy</li>
+                    <li>Integrar test_command real</li>
+                    <li>clawhip trigger em commits</li>
+                  </ul>
+                  <div class="roadmap-progress">
+                    <div class="roadmap-progress-fill" style="width:25%;background:linear-gradient(90deg,#9c7df5,#2f78f0);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PAINEL DIREITO: MEMÓRIA + CUSTO -->
+            <div style="display:flex;flex-direction:column;gap:16px;">
+
+              <!-- MEMORY STATS -->
+              <div>
+                <div class="loop-section-title" style="margin-bottom:8px;">MemoryEngine — cross-sessão</div>
+                <div class="memory-panel">
+                  <div class="memory-header">
+                    <div class="memory-title"><i class="fas fa-memory" style="color:#9c7df5;margin-right:6px;"></i>Memória Persistente</div>
+                    <div class="memory-controls">
+                      <button class="btn-mem btn-mem--export" onclick="memExport()"><i class="fas fa-download"></i> Export</button>
+                      <button class="btn-mem btn-mem--clear" onclick="memClear()"><i class="fas fa-trash"></i> Clear</button>
+                    </div>
+                  </div>
+                  <div id="memory-stats-display"></div>
+                  <div class="memory-facts-section" id="memory-facts-list">
+                    <div style="color:#2e4560;font-size:11px;text-align:center;padding:16px;">Carregando memória...</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- COST TRACKER -->
+              <div>
+                <div class="loop-section-title" style="margin-bottom:8px;">CostTracker — uso e economia</div>
+                <div id="cost-panel-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LOOP AUTÔNOMO -->
+          <div id="claw-loop-section">
+            <div class="loop-section-title" style="margin-bottom:8px;">Loop Autônomo — plan → execute → test → deploy</div>
+            <div id="loop-panel-container"></div>
+          </div>
+
+          <!-- CLAW TOOLS CARDS -->
+          <div>
+            <div class="loop-section-title" style="margin-bottom:8px;">Capacidades do Claw Code — identificadas e integradas</div>
+            <div class="claw-grid-3">
+              <div class="claw-card" onclick="setAgentPrompt('/ultraplan: analise o repositório configurado e crie um plano de melhorias')">
+                <div class="claw-card-icon">⚡</div>
+                <div class="claw-card-title">UltraPlan</div>
+                <div class="claw-card-desc">Decomposição profunda de tasks com raciocínio estendido. Entrada: uma frase. Saída: plano com arquivos, riscos e DoD.</div>
+                <span class="claw-card-badge claw-badge-claw">Claw</span>
+              </div>
+              <div class="claw-card" onclick="setAgentPrompt('/bughunter: analise os arquivos carregados em memória em busca de bugs e vulnerabilidades')">
+                <div class="claw-card-icon">🔍</div>
+                <div class="claw-card-title">BugHunter</div>
+                <div class="claw-card-desc">Scan automático de bugs, XSS, injection, memory leaks e code smells. Severidade CRÍTICO/ALTO/MÉDIO/BAIXO.</div>
+                <span class="claw-card-badge claw-badge-claw">Claw</span>
+              </div>
+              <div class="claw-card" onclick="setAgentPrompt('/teleport: busque a função mais importante do projeto')">
+                <div class="claw-card-icon">🔭</div>
+                <div class="claw-card-title">Teleport</div>
+                <div class="claw-card-desc">Navegação instantânea a qualquer símbolo, função ou padrão nos arquivos carregados em memória.</div>
+                <span class="claw-card-badge claw-badge-claw">Claw</span>
+              </div>
+              <div class="claw-card" onclick="setAgentPrompt('Use claw_memread para ler tudo que está na memória persistente desta sessão')">
+                <div class="claw-card-icon">🧠</div>
+                <div class="claw-card-title">MemoryEngine</div>
+                <div class="claw-card-desc">Fatos, sessões, snippets e erros persistem entre reloads. Inspirado no memdir + session_store do Claw Code.</div>
+                <span class="claw-card-badge claw-badge-nga">Nga+Claw</span>
+              </div>
+              <div class="claw-card" onclick="setAgentPrompt('Use claw_provider com action=status para ver o estado atual do backend LLM')">
+                <div class="claw-card-icon">🔌</div>
+                <div class="claw-card-title">Multi-Provider</div>
+                <div class="claw-card-desc">Ollama local (grátis), OpenRouter free tier, Claw CLI local. Zero custo de API para tarefas simples.</div>
+                <span class="claw-card-badge claw-badge-free">Grátis</span>
+              </div>
+              <div class="claw-card" onclick="setAgentPrompt('Como configurar o loop autônomo para monitorar issues do GitHub e executar tasks automaticamente?')">
+                <div class="claw-card-icon">🤖</div>
+                <div class="claw-card-title">Loop Autônomo</div>
+                <div class="claw-card-desc">Watcher de issues dispara Claw. Claw planeja e executa. Você só aprova writes críticos.</div>
+                <span class="claw-card-badge claw-badge-wip">Fase 3</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /padding -->
+      </div><!-- /panel-claw -->
+
+      <!-- ══ MARKETPLACE ═══════════════════════════════════════════════ -->
+      <div id="panel-marketplace" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-store"></i> MARKETPLACE</div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <input id="marketplace-search" class="api-input" type="text" placeholder="Buscar extensions..." style="width:160px;font-size:11px;" oninput="filterMarketplace(this.value)"/>
+            <button class="btn-sm" onclick="refreshMarketplace()"><i class="fas fa-sync"></i> ATUALIZAR</button>
+          </div>
+        </div>
+        <div id="marketplace-grid"></div>
+      </div>
+
+      <!-- ══ ANALYTICS ════════════════════════════════════════════════ -->
+      <div id="panel-analytics" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-chart-line"></i> ANALYTICS</div>
+          <select id="analytics-period" class="api-input" style="width:120px;font-size:11px;" onchange="updateAnalytics()">
+            <option value="24h">Últimas 24h</option>
+            <option value="7d">Última Semana</option>
+            <option value="30d">Último Mês</option>
+            <option value="1y">Último Ano</option>
+          </select>
+        </div>
+        <div id="analytics-charts"></div>
+      </div>
+
+      <!-- ══ COLLABORATION ═════════════════════════════════════════════ -->
+      <div id="panel-collaboration" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-users"></i> COLABORAÇÃO</div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <span id="online-count" class="badge-count green">0</span>
+            <button class="btn-sm" onclick="startCollaborationSession()"><i class="fas fa-play"></i> INICIAR SESSÃO</button>
+          </div>
+        </div>
+        <div id="collaboration-users"></div>
+        <div id="collaboration-chat"></div>
+      </div>
+
+      <!-- ══ VR/AR STUDIO ══════════════════════════════════════════════ -->
+      <div id="panel-vrar" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-vr-cardboard"></i> VR/AR STUDIO</div>
+          <button class="btn-sm" onclick="toggleVRMode()"><i class="fas fa-glasses"></i> ENTRAR NO VR</button>
+        </div>
+        <div id="vr-ar-canvas"></div>
+      </div>
+
+      <!-- ══ QUANTUM COMPUTING ════════════════════════════════════════ -->
+      <div id="panel-quantum" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-atom"></i> QUANTUM COMPUTING</div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <span id="quantum-status" class="badge-count cyan">SIMULATED</span>
+            <button class="btn-sm" onclick="runQuantumAlgorithm()"><i class="fas fa-play"></i> EXECUTAR</button>
+          </div>
+        </div>
+        <div id="quantum-circuit"></div>
+        <div id="quantum-results"></div>
+      </div>
+
+      <!-- ══ NEURAL NETWORKS ══════════════════════════════════════════ -->
+      <div id="panel-neural" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-brain"></i> NEURAL NETWORKS</div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <select id="neural-model" class="api-input" style="width:120px;font-size:11px;">
+              <option value="classification">Classificação</option>
+              <option value="regression">Regressão</option>
+              <option value="clustering">Clustering</option>
+              <option value="generation">Geração</option>
+            </select>
+            <button class="btn-sm" onclick="trainNeuralNetwork()"><i class="fas fa-cogs"></i> TREINAR</button>
+          </div>
+        </div>
+        <div id="neural-visualization"></div>
+        <div id="neural-metrics"></div>
+      </div>
+
+      <!-- ══ IOT & HARDWARE ════════════════════════════════════════════ -->
+      <div id="panel-iot" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-microchip"></i> IoT & HARDWARE</div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <span id="iot-devices" class="badge-count green">0</span>
+            <button class="btn-sm" onclick="scanIoTDevices()"><i class="fas fa-search"></i> ESCANEAR</button>
+          </div>
+        </div>
+        <div id="iot-devices-list"></div>
+        <div id="iot-dashboard"></div>
+      </div>
+
+      <!-- ══ GAME DEVELOPMENT ══════════════════════════════════════════ -->
+      <div id="panel-gamedev" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-gamepad"></i> GAME DEVELOPMENT</div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <select id="game-engine" class="api-input" style="width:120px;font-size:11px;">
+              <option value="phaser">Phaser.js</option>
+              <option value="pixi">Pixi.js</option>
+              <option value="babylon">Babylon.js</option>
+              <option value="playcanvas">PlayCanvas</option>
+            </select>
+            <button class="btn-sm" onclick="createGameProject()"><i class="fas fa-plus"></i> NOVO JOGO</button>
+          </div>
+        </div>
+        <div id="game-canvas"></div>
+        <div id="game-assets"></div>
+      </div>
+
+      <!-- ══ AUDIO ENGINEERING ═════════════════════════════════════════ -->
+      <div id="panel-audio" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-music"></i> AUDIO ENGINEERING</div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <button class="btn-sm" onclick="startAudioRecording()"><i class="fas fa-microphone"></i> GRAVAR</button>
+            <button class="btn-sm" onclick="playAudio()"><i class="fas fa-play"></i> TOCAR</button>
+          </div>
+        </div>
+        <div id="audio-waveform"></div>
+        <div id="audio-controls"></div>
+      </div>
+
+      <!-- ══ VIDEO PROCESSING ══════════════════════════════════════════ -->
+      <div id="panel-video" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-video"></i> VIDEO PROCESSING</div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <button class="btn-sm" onclick="openVideoFile()"><i class="fas fa-folder-open"></i> ABRIR</button>
+            <button class="btn-sm" onclick="processVideo()"><i class="fas fa-cogs"></i> PROCESSAR</button>
+          </div>
+        </div>
+        <div id="video-player"></div>
+        <div id="video-effects"></div>
+      </div>
+
+      <!-- ══ NATURAL LANGUAGE ═══════════════════════════════════════════ -->
+      <div id="panel-nlp" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-language"></i> NATURAL LANGUAGE</div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <select id="nlp-task" class="api-input" style="width:140px;font-size:11px;">
+              <option value="sentiment">Análise de Sentimento</option>
+              <option value="translation">Tradução</option>
+              <option value="summarization">Resumo</option>
+              <option value="generation">Geração de Texto</option>
+            </select>
+            <button class="btn-sm" onclick="processNLP()"><i class="fas fa-magic"></i> PROCESSAR</button>
+          </div>
+        </div>
+        <div id="nlp-input"></div>
+        <div id="nlp-output"></div>
+      </div>
+
+      <!-- ══ SCIENTIFIC COMPUTING ══════════════════════════════════════ -->
+      <div id="panel-science" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-flask"></i> SCIENTIFIC COMPUTING</div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <button class="btn-sm" onclick="runSimulation()"><i class="fas fa-calculator"></i> SIMULAR</button>
+            <button class="btn-sm" onclick="plotGraph()"><i class="fas fa-chart-line"></i> GRÁFICO</button>
+          </div>
+        </div>
+        <div id="science-calculator"></div>
+        <div id="science-plot"></div>
+      </div>
+
+      <!-- ══ ROBOTICS ═══════════════════════════════════════════════════ -->
+      <div id="panel-robotics" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-robot"></i> ROBOTICS</div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <span id="robot-status" class="badge-count blue">OFFLINE</span>
+            <button class="btn-sm" onclick="connectRobot()"><i class="fas fa-link"></i> CONECTAR</button>
+          </div>
+        </div>
+        <div id="robot-control"></div>
+        <div id="robot-sensors"></div>
+      </div>
+
+      <!-- ══ SPACE TECH ═════════════════════════════════════════════════ -->
+      <div id="panel-space" class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><i class="fas fa-rocket"></i> SPACE TECH</div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <button class="btn-sm" onclick="trackSatellite()"><i class="fas fa-satellite"></i> RASTREAR</button>
+            <button class="btn-sm" onclick="calculateOrbit()"><i class="fas fa-globe"></i> ÓRBITA</button>
+          </div>
+        </div>
+        <div id="satellite-tracking"></div>
+        <div id="orbit-visualization"></div>
+      </div>
+
+    </main><!-- /panels -->
+
+    <!-- BOTTOM TAB BAR (mobile) -->
+    <div id="bottom-tabs">
+      <div id="bottom-tabs-inner"></div>
+    </div>
+
+  </div><!-- /content -->
+
+</div><!-- /app -->
+
+<!-- ══ SCRIPTS (ordem importa) ══════════════════════════════════ -->
+<script src="js/ecosystem.js"></script>
+<script src="js/core.js"></script>
+<script src="js/apikeys.js"></script>
+<script src="js/three-bg.js"></script>
+<!-- TITAN v6 FUSION — Claw Code modules (carregar ANTES do agent.js) -->
+<script src="js/memory-engine.js"></script>
+<script src="js/cost-tracker.js"></script>
+<script src="js/claw-bridge.js"></script>
+<script src="js/autonomous-loop.js"></script>
+<!-- Core agent -->
+<script src="js/agent.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/skills.js"></script>
+<script src="js/visual-enhancements.js"></script>
+
+<script>
+/* ── TITAN v6 INIT [FUSED: Nga + Claw Code] ─────────────────────── */
+(function init(){
+  // Init Three.js background
+  try { if(window.initThreeBackground) initThreeBackground(); }
+  catch(e){ console.warn("Three.js init error:", e); }
+
+  // Load persistent data
+  loadKeys();
+  loadBookmarks?.();
+  loadSnippets?.();
+
+  // ── v6: Init fusion modules ────────────────────────────────────
+  try { if(window.initMemoryEngine) initMemoryEngine(); }
+  catch(e){ console.warn("MemoryEngine init error:", e); }
+
+  try { if(window.initCostTracker) initCostTracker(); }
+  catch(e){ console.warn("CostTracker init error:", e); }
+
+  try { if(window.initClawBridge) initClawBridge(); }
+  catch(e){ console.warn("ClawBridge init error:", e); }
+
+  try { if(window.initAutonomousLoop) initAutonomousLoop(); }
+  catch(e){ console.warn("AutonomousLoop init error:", e); }
+
+  // Atualiza contexto do projeto na memória com dados das keys
+  try {
+    if(window.memUpdateProjectCtx && KEYS.githubRepo) {
+      memUpdateProjectCtx({
+        repo: KEYS.githubRepo,
+        branch: KEYS.githubBranch || "main",
+        model: MODEL,
+        version: VERSION,
+      });
+    }
+  } catch(e){}
+
+  // Build UI
+  buildTabs();
+  buildSkillsNav();
+  buildSkillsGrid();
+  updateConnStatus();
+  updateBadges();
+
+  // Switch to initial tab
+  switchTab("dashboard");
+
+  // Render initial agent message
+  const msgs = document.getElementById("chat-messages");
+  if(msgs && STATE.agentMsgs.length) {
+    STATE.agentMsgs.forEach(msg => renderAgentMsg(msg));
+  }
+
+  // If already configured, skip setup screen
+  if(isConfigured()){
+    const ss = document.getElementById("setup-screen");
+    if(ss) ss.classList.remove("show");
+    const cb = document.getElementById("config-btn");
+    if(cb) cb.classList.add("configured");
+    const ct = document.getElementById("config-btn-text");
+    if(ct) ct.textContent = "✓ KEYS";
+    addLog("success","INIT","TITAN v6 online [Nga + Claw] — API Keys carregadas");
+    startRealDataPolling();
+  } else {
+    addLog("info","INIT","TITAN v6 iniciado [Nga + Claw] — configure suas API Keys");
+  }
+
+  // Update agent model badge
+  updateAgentModelBadge();
+
+  // Mobile touch: swipe down to close modal
+  let touchStartY = 0;
+  const modal = document.getElementById("api-modal");
+  if(modal){
+    modal.addEventListener("touchstart", e => touchStartY = e.touches[0].clientY, {passive:true});
+    modal.addEventListener("touchmove", e => {
+      if(e.touches[0].clientY - touchStartY > 80) closeApiModal();
+    }, {passive:true});
+  }
+
+  // Keyboard shortcuts
+  document.addEventListener("keydown", e => {
+    if(e.ctrlKey && e.key === "k"){ e.preventDefault(); openGlobalSearch(); }
+    if(e.key === "Escape"){ closeApiModal(); closeGlobalSearch(); closeRepoSwitcher(); }
+  });
+
+  // Window resize
+  window.addEventListener("resize", ()=>{
+    const isMobile = window.innerWidth < 768;
+    if(!isMobile){ closeSidebar(); }
+  });
+
+  addLog("info","INIT","TITAN v5 pronto ⚡ Versão "+VERSION);
+})();
+</script>
+</body>
+</html>
